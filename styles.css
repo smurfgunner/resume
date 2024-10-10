@@ -72,8 +72,9 @@ body {
 
 @media (min-width: 769px) {
     .columns {
-        display: flex;
-        grid-template-columns: 1fr, 2fr; /* Double-column layout */
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Column A (1 part) and Column B (2 parts) */
+        grid-gap: 40px;
     }
 
     .personal-info {
