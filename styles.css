@@ -50,15 +50,30 @@ header h1 {
     color: #000;
 }
 
-header p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #555; /* Subtle text color for contact details */
-}
-
 header a {
     color: #007aff; /* Apple's signature blue */
     text-decoration: none;
+}
+
+header p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555; /* Subtle color for text */
+}
+
+header p i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #007aff; /* Apple's signature blue */
+}
+
+header p a {
+    color: inherit; /* Same color as surrounding text */
+    text-decoration: none;
+}
+
+header p a:hover {
+    text-decoration: underline;
 }
 
 header a:hover {
