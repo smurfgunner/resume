@@ -9,21 +9,26 @@ body {
     padding: 0;
 }
 
+/* Base styling */
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 40px auto;
-    background-color: #ffffff; /* Pure white background for content */
+    background-color: #ffffff;
     padding: 40px;
-    border-radius: 12px; /* Subtle rounded corners */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft drop shadow for elevation */
-    font-weight: 300; /* Light font weight for readability */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* Grid Layout for Columns */
+/* Desktop Layout: Two Columns */
 .columns {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* One-third width for Column A, two-thirds for Column B */
+    grid-template-columns: 1fr 2fr; /* Column A (1 part) and Column B (2 parts) */
     grid-gap: 40px;
+}
+
+/* Individual Column Styling */
+.column {
+    padding: 0 20px;
 }
 
 /* Column A (Personal Info, Skills, Education) */
@@ -207,9 +212,37 @@ a:hover {
     transition: color 0.3s ease;
 }
 
-/* Responsive Design */
+/* Mobile Layout: Stack all sections in one column with custom order */
 @media (max-width: 768px) {
     .columns {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr; /* Single-column layout */
+        grid-template-areas: 
+            "personal-info"
+            "summary"
+            "work-history"
+            "skills"
+            "education"; /* Custom order */
+    }
+
+    /* Assign grid areas to sections */
+    .personal-info {
+        grid-area: personal-info;
+    }
+
+    .summary {
+        grid-area: summary;
+    }
+
+    .work-history {
+        grid-area: work-history;
+    }
+
+    .skills {
+        grid-area: skills;
+    }
+
+    .education {
+        grid-area: education;
     }
 }
