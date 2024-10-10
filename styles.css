@@ -38,7 +38,7 @@ body {
 }
 
 /* Mobile Layout: Stacking sections in one column with custom order */
-@media (max-width: 768px) {
+@media (min-width: 769px) {
     .columns {
         display: flex;
         flex-direction: column; /* Stack all sections vertically */
@@ -53,20 +53,15 @@ body {
     }
 
     .work-history {
-        order: 3; /* Work History comes third */
+        order: 4; /* Work History comes third */
     }
 
     .skills {
-        order: 4; /* Skills come fourth */
+        order: 3; /* Skills come fourth */
     }
 
     .education {
         order: 5; /* Education comes last */
-    }
-
-    /* Ensure all sections take full width on mobile */
-    .personal-info, .skills, .education, .summary, .work-history {
-        flex-basis: 100%; /* Full width on mobile */
     }
 }
 
