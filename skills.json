@@ -1,0 +1,12 @@
+{
+    "skills": [
+        { "name": "Swift", "level": "95%" },
+        { "name": "Software Architecture", "level": "95%" },
+        { "name": "SDK development", "level": "95%" },
+        { "name": "Automated testing", "level": "90%" },
+        { "name": "Git", "level": "85%" },
+        { "name": "Unity3D C#", "level": "30%" },
+        { "name": "React Native Javascript", "level": "10%" },
+        { "name": "Flutter Dart", "level": "10%" }
+    ]
+}

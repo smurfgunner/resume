@@ -25,21 +25,12 @@
             </p>
         </section>
 
-        <!-- Skills -->
+        <!-- Skills with bars -->
         <section class="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>Swift</li>
-                <li>Software Architecture</li>
-                <li>SDK development</li>
-                <li>Automated testing</li>
-                <li>Git</li>
-                <li>Unity3D C#</li>
-                <li>React Native Javascript</li>
-                <li>Flutter Dart</li>
-            </ul>
+            <div id="skills-container"></div>
         </section>
-
+        
         <!-- Education -->
         <section class="education">
             <h2>Education</h2>
@@ -77,5 +68,51 @@
             </div>
         </section>
     </div>
+
+    <script>
+        // Function to load skills from the JSON file
+        async function loadSkills() {
+            try {
+                const response = await fetch('skills.json');
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status} - ${response.statusText}`);
+                }
+                const data = await response.json();
+                
+                const skillsContainer = document.getElementById('skills-container');
+                
+                data.skills.forEach(skill => {
+                    // Create skill elements
+                    const skillDiv = document.createElement('div');
+                    skillDiv.classList.add('skill');
+    
+                    const skillName = document.createElement('span');
+                    skillName.textContent = skill.name;
+    
+                    const skillBar = document.createElement('div');
+                    skillBar.classList.add('skill-bar');
+    
+                    const skillLevel = document.createElement('div');
+                    skillLevel.classList.add('skill-level');
+                    skillLevel.style.width = skill.level;
+    
+                    // Append the skill name and level bar
+                    skillBar.appendChild(skillLevel);
+                    skillDiv.appendChild(skillName);
+                    skillDiv.appendChild(skillBar);
+    
+                    // Add to the container
+                    skillsContainer.appendChild(skillDiv);
+                });
+            } catch (error) {
+                // Display an alert to the user in case of an error
+                alert(`An error occurred while loading skills: ${error.message}`);
+            }
+        }
+    
+        // Load skills when the page loads
+        window.onload = loadSkills;
+    </script>
+    
 </body>
 </html>
