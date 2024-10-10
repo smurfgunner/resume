@@ -38,10 +38,42 @@ body {
 }
 
 /* Mobile Layout: Stacking sections in one column with custom order */
-@media (min-width: 769px) {
+@media (max-width: 768px) {
     .columns {
         display: flex;
         flex-direction: column; /* Stack all sections vertically */
+    }
+
+    .personal-info {
+        order: 1; /* Personal Info at the top */
+    }
+
+    .summary {
+        order: 2; /* Summary comes second */
+    }
+
+    .work-history {
+        order: 3; /* Work History comes third */
+    }
+
+    .skills {
+        order: 4; /* Skills come fourth */
+    }
+
+    .education {
+        order: 5; /* Education comes last */
+    }
+
+    /* Ensure all sections take full width on mobile */
+    .personal-info, .skills, .education, .summary, .work-history {
+        flex-basis: 100%; /* Full width on mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .columns {
+        display: flex;
+        grid-template-columns: 1fr, 2fr; /* Double-column layout */
     }
 
     .personal-info {
@@ -233,39 +265,4 @@ h2 {
 a:hover {
     color: #007aff;
     transition: color 0.3s ease;
-}
-
-/* Mobile Layout: Stack all sections in one column with custom order */
-@media (max-width: 768px) {
-    .columns {
-        display: grid;
-        grid-template-columns: 1fr; /* Single-column layout */
-        grid-template-areas: 
-            "personal-info"
-            "summary"
-            "work-history"
-            "skills"
-            "education"; /* Custom order */
-    }
-
-    /* Assign grid areas to sections */
-    .personal-info {
-        grid-area: personal-info;
-    }
-
-    .summary {
-        grid-area: summary;
-    }
-
-    .work-history {
-        grid-area: work-history;
-    }
-
-    .skills {
-        grid-area: skills;
-    }
-
-    .education {
-        grid-area: education;
-    }
 }
