@@ -72,8 +72,18 @@ async function loadWorkHistory() {
     }
 }
 
+function animateSkillBars() {
+    // Add animation class to all skill bars after the page loads
+    const skillBars = document.querySelectorAll('.skill-bar');
+    
+    skillBars.forEach(skillBar => {
+        skillBar.classList.add('animate');
+    });
+};
+
 // Load work history when the page loads
 window.onload = function() {
     loadSkills(); // Call to load skills (from the earlier example)
     loadWorkHistory(); // Call to load work history
+    animateSkillBars();
 };

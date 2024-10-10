@@ -107,21 +107,38 @@ h2 {
     font-weight: 400;
 }
 
+/* Skill Bars */
 .skill-bar {
     background-color: #eaeaea;
     border-radius: 10px;
     height: 12px;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .skill-level {
-    background-color: #007aff;
+    background-color: #007aff; /* Apple's blue */
     height: 100%;
     border-radius: 10px;
-    transition: width 0.4s ease;
+    width: 0%; /* Start with 0% width */
+    transition: width 2s ease-in-out; /* Smooth animation */
 }
 
+/* Once the page loads, this class will be added to animate the width */
+.skill-bar.animate .skill-level {
+    width: 90%; /* Dynamically set in JavaScript based on skill level */
+}
+
+/* Keyframe animation for filling the bar */
+@keyframes grow-bar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--skill-width);
+    }
+}
 /* Education Section */
 .education {
     margin-bottom: 40px;
