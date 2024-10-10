@@ -36,7 +36,7 @@ async function loadSkills() {
             setTimeout(() => {
                 skillDiv.style.opacity = '1'; // Fade in effect
                 skillLevel.style.width = skill.level; // Set the actual width from JSON
-            }, 100 * index); // Each skill appears 100ms after the previous one
+            }, 1000 * (index + 1)); // Each skill appears 1000ms after the previous one
         });
 
     } catch (error) {
