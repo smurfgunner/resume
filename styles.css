@@ -1,20 +1,34 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
+/* Container styling */
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     background: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Columns Layout */
+.columns {
+    display: flex;
+    gap: 20px; /* Space between columns */
+}
+
+/* Individual Column Styling */
+.column {
+    flex: 1;
+}
+
+/* Column A (Personal Info, Skills, Education) */
+#column-a {
+    flex-basis: 35%; /* This column will take up 35% of the space */
+}
+
+/* Column B (Professional Summary, Work History) */
+#column-b {
+    flex-basis: 65%; /* This column will take up 65% of the space */
+}
+
+/* Header Section */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -38,6 +52,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Section Titles */
 h2 {
     background-color: #333;
     color: #fff;
@@ -46,8 +61,11 @@ h2 {
     font-size: 24px;
 }
 
-/* Skill bars */
-/* Existing CSS for skill bars */
+/* Skills Section */
+.skills {
+    margin-bottom: 20px;
+}
+
 .skill {
     margin-bottom: 15px;
 }
@@ -72,6 +90,7 @@ h2 {
     transition: width 0.5s;
 }
 
+/* Education and Work History */
 .education, .work-history {
     margin-bottom: 20px;
 }

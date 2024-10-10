@@ -8,111 +8,75 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header Section -->
-        <header>
-            <h1>Vahid Ghanbarpour</h1>
-            <p>Email: <a href="mailto:vahidgr@yahoo.com">vahidgr@yahoo.com</a> | Phone: +989010206618</p>
-            <p>Location: Urmia, WA, Iran | <a href="https://github.com/VahidGR" target="_blank">GitHub</a></p>
-        </header>
+        <div class="columns">
+            <!-- Column A -->
+            <div class="column" id="column-a">
+                <!-- Header Section (Personal Info) -->
+                <header>
+                    <h1>Vahid Ghanbarpour</h1>
+                    <p>Email: <a href="mailto:vahidgr@yahoo.com">vahidgr@yahoo.com</a> | Phone: +989010206618</p>
+                    <p>Location: Urmia, WA, Iran | <a href="https://github.com/VahidGR" target="_blank">GitHub</a></p>
+                </header>
 
-        <!-- Professional Summary -->
-        <section class="summary">
-            <h2>Professional Summary</h2>
-            <p>
-                I bring over 8 years of experience as an iOS Engineer, demonstrating proficiency in writing clean code and applying OOP principles.
-                I have successfully delivered multiple apps to large user bases and overseen their distribution and integrity during development and production.
-                My strengths include building strong relationships with colleagues and being a reliable team member.
-            </p>
-        </section>
+                <!-- Skills -->
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <div id="skills-container"></div> <!-- Skills will be loaded here -->
+                </section>
 
-        <!-- Skills with bars -->
-        <section class="skills">
-            <h2>Skills</h2>
-            <div id="skills-container"></div>
-        </section>
-        
-        <!-- Education -->
-        <section class="education">
-            <h2>Education</h2>
-            <p><strong>AB Highschool, Urmia, WA, Iran</strong> • 07/2017 <br> High School Diploma</p>
-        </section>
+                <!-- Education -->
+                <section class="education">
+                    <h2>Education</h2>
+                    <p><strong>AB Highschool, Urmia, WA, Iran</strong> • 07/2017 <br> High School Diploma</p>
+                </section>
+            </div>
 
-        <!-- Work History -->
-        <section class="work-history">
-            <h2>Work History</h2>
-            <div class="job">
-                <h3>Namava - Senior Software Engineer, IOS</h3>
-                <p>Tehran, Iran (Remote) • 11/2022 - Current</p>
-                <ul>
-                    <li>Design and maintain Video Player SDK.</li>
-                    <li>Lead a rewrite of project, designing a Clean Architecture for both high level and low level components.</li>
-                    <li>Deploy Fastlane into GitLab CI to ensure code quality, test coverage, and seamless deployment.</li>
-                    <li>Mentor developers through 1-on-1 talks, code reviews, and educational sessions.</li>
-                </ul>
+            <!-- Column B -->
+            <div class="column" id="column-b">
+                <!-- Professional Summary -->
+                <section class="summary">
+                    <h2>Professional Summary</h2>
+                    <p>
+                        I bring over 8 years of experience as an iOS Engineer, demonstrating proficiency in writing clean code and applying OOP principles.
+                        I have successfully delivered multiple apps to large user bases and overseen their distribution and integrity during development and production.
+                        My strengths include building strong relationships with colleagues and being a reliable team member.
+                    </p>
+                </section>
+
+                <!-- Work History -->
+                <section class="work-history">
+                    <h2>Work History</h2>
+                    <div class="job">
+                        <h3>Namava - Senior Software Engineer, IOS</h3>
+                        <p>Tehran, Iran (Remote) • 11/2022 - Current</p>
+                        <ul>
+                            <li>Design and maintain Video Player SDK.</li>
+                            <li>Lead a rewrite of project, designing a Clean Architecture for both high level and low level components.</li>
+                            <li>Deploy Fastlane into GitLab CI to ensure code quality, test coverage, and seamless deployment.</li>
+                            <li>Mentor developers through 1-on-1 talks, code reviews, and educational sessions.</li>
+                        </ul>
+                    </div>
+                    <div class="job">
+                        <h3>StrAIberry - IOS Engineer</h3>
+                        <p>Vancouver, Canada (Remote) • 10/2020 - 11/2022</p>
+                        <ul>
+                            <li>Translate UI designs into smooth software.</li>
+                            <li>Embed object detection ML model into interactive UI.</li>
+                        </ul>
+                    </div>
+                    <div class="job">
+                        <h3>Contractor - Software Developer</h3>
+                        <p>Urmia, Iran • 10/2015 - 09/2020</p>
+                        <ul>
+                            <li>Develop server-side applications using Node.JS framework, integrated with MongoDB.</li>
+                            <li>Maintain existing Flutter codebase, fix bugs, and develop new features.</li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-            <div class="job">
-                <h3>StrAIberry - IOS Engineer</h3>
-                <p>Vancouver, Canada (Remote) • 10/2020 - 11/2022</p>
-                <ul>
-                    <li>Translate UI designs into smooth software.</li>
-                    <li>Embed object detection ML model into interactive UI.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Contractor - Software Developer</h3>
-                <p>Urmia, Iran • 10/2015 - 09/2020</p>
-                <ul>
-                    <li>Develop server-side applications using Node.JS framework, integrated with MongoDB.</li>
-                    <li>Maintain existing Flutter codebase, fix bugs, and develop new features.</li>
-                </ul>
-            </div>
-        </section>
+        </div>
     </div>
 
-    <script>
-        // Function to load skills from the JSON file
-        async function loadSkills() {
-            try {
-                const response = await fetch('skills.json');
-                if (!response.ok) {
-                    throw new Error(`Error: ${response.status} - ${response.statusText}`);
-                }
-                const data = await response.json();
-                
-                const skillsContainer = document.getElementById('skills-container');
-                
-                data.skills.forEach(skill => {
-                    // Create skill elements
-                    const skillDiv = document.createElement('div');
-                    skillDiv.classList.add('skill');
-    
-                    const skillName = document.createElement('span');
-                    skillName.textContent = skill.name;
-    
-                    const skillBar = document.createElement('div');
-                    skillBar.classList.add('skill-bar');
-    
-                    const skillLevel = document.createElement('div');
-                    skillLevel.classList.add('skill-level');
-                    skillLevel.style.width = skill.level;
-    
-                    // Append the skill name and level bar
-                    skillBar.appendChild(skillLevel);
-                    skillDiv.appendChild(skillName);
-                    skillDiv.appendChild(skillBar);
-    
-                    // Add to the container
-                    skillsContainer.appendChild(skillDiv);
-                });
-            } catch (error) {
-                // Display an alert to the user in case of an error
-                alert(`An error occurred while loading skills: ${error.message}`);
-            }
-        }
-    
-        // Load skills when the page loads
-        window.onload = loadSkills;
-    </script>
-    
+    <script src="script.js"></script> <!-- External JavaScript for loading skills from JSON -->
 </body>
 </html>
