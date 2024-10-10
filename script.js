@@ -31,10 +31,10 @@ async function loadSkills() {
             skillDiv.appendChild(skillBar);
             skillsContainer.appendChild(skillDiv);
 
-            // Animate the skill bar after a short delay
+            // Trigger the animation by setting the final width after a short delay
             setTimeout(() => {
                 skillLevel.style.width = skill.level; // Set the actual width from JSON
-            }, 100); // Add a short delay to ensure the transition is visible
+            }, 100); // Short delay ensures the browser registers the initial 0% width
         });
 
     } catch (error) {
