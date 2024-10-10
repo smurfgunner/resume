@@ -10,7 +10,7 @@ async function loadSkills() {
         const skillsContainer = document.getElementById('skills-container');
 
         // Loop through the skills and dynamically create the skill bars
-        data.skills.forEach(skill => {
+        data.skills.forEach((skill, index) => {
             // Create skill elements
             const skillDiv = document.createElement('div');
             skillDiv.classList.add('skill');
@@ -31,10 +31,10 @@ async function loadSkills() {
             skillDiv.appendChild(skillBar);
             skillsContainer.appendChild(skillDiv);
 
-            // Trigger the animation by setting the final width after a short delay
+            // Stagger the animation by delaying each skill by an additional 100ms
             setTimeout(() => {
                 skillLevel.style.width = skill.level; // Set the actual width from JSON
-            }, 100); // Short delay ensures the browser registers the initial 0% width
+            }, index * 100); // Delay increases with each skill
         });
 
     } catch (error) {
