@@ -1,14 +1,17 @@
 async function loadSkills() {
     try {
+        // Fetch the skills data from the JSON file
         const response = await fetch('skills.json');
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            throw new Error(`Error fetching skills: ${response.status}`);
         }
+
         const data = await response.json();
-        
         const skillsContainer = document.getElementById('skills-container');
-        
+
+        // Loop through the skills and dynamically create the skill bars
         data.skills.forEach(skill => {
+            // Create skill elements
             const skillDiv = document.createElement('div');
             skillDiv.classList.add('skill');
 
@@ -20,15 +23,22 @@ async function loadSkills() {
 
             const skillLevel = document.createElement('div');
             skillLevel.classList.add('skill-level');
-            skillLevel.style.width = skill.level;
+            skillLevel.style.width = '0%'; // Initially set the width to 0%
 
+            // Append the skill name and the bar
             skillBar.appendChild(skillLevel);
             skillDiv.appendChild(skillName);
             skillDiv.appendChild(skillBar);
             skillsContainer.appendChild(skillDiv);
+
+            // Animate the skill bar after a short delay
+            setTimeout(() => {
+                skillLevel.style.width = skill.level; // Set the actual width from JSON
+            }, 100); // Add a short delay to ensure the transition is visible
         });
+
     } catch (error) {
-        alert(`An error occurred while loading skills: ${error.message}`);
+        alert(`An error occurred: ${error.message}`);
     }
 }
 
@@ -72,18 +82,8 @@ async function loadWorkHistory() {
     }
 }
 
-function animateSkillBars() {
-    // Add animation class to all skill bars after the page loads
-    const skillBars = document.querySelectorAll('.skill-bar');
-    
-    skillBars.forEach(skillBar => {
-        skillBar.classList.add('animate');
-    });
-};
-
 // Load work history when the page loads
 window.onload = function() {
     loadSkills(); // Call to load skills (from the earlier example)
     loadWorkHistory(); // Call to load work history
-    animateSkillBars();
 };

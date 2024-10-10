@@ -95,18 +95,6 @@ h2 {
     margin-bottom: 40px;
 }
 
-.skill {
-    margin-bottom: 15px;
-}
-
-.skill span {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #333;
-    font-weight: 400;
-}
-
 /* Skill Bars */
 .skill-bar {
     background-color: #eaeaea;
@@ -115,6 +103,7 @@ h2 {
     position: relative;
     overflow: hidden;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .skill-level {
@@ -122,8 +111,21 @@ h2 {
     height: 100%;
     border-radius: 10px;
     width: 0%; /* Start with 0% width */
-    transition: width 2s ease-in-out; /* Smooth animation */
+    transition: width 2s ease-in-out; /* Animate the width */
 }
+
+/* Optional styling for skill names */
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill span {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
 
 /* Once the page loads, this class will be added to animate the width */
 .skill-bar.animate .skill-level {
