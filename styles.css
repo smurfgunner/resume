@@ -111,12 +111,13 @@ h2 {
     height: 100%;
     border-radius: 10px;
     width: 0%; /* Start with 0% width */
-    transition: width 2s ease-in-out; /* Animate the width */
+    transition: width 2s ease-in-out; /* Smooth animation for bar fill */
 }
 
-/* Optional styling for skill names */
+/* Skill container with fade-in */
 .skill {
-    margin-bottom: 20px;
+    opacity: 0; /* Initially hidden for fade-in */
+    transition: opacity 1s ease-in; /* Fade-in effect */
 }
 
 .skill span {

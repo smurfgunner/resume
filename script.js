@@ -14,6 +14,7 @@ async function loadSkills() {
             // Create skill elements
             const skillDiv = document.createElement('div');
             skillDiv.classList.add('skill');
+            skillDiv.style.opacity = '0'; // Initial opacity for fade-in effect
 
             const skillName = document.createElement('span');
             skillName.textContent = skill.name;
@@ -31,10 +32,11 @@ async function loadSkills() {
             skillDiv.appendChild(skillBar);
             skillsContainer.appendChild(skillDiv);
 
-            // Stagger the animation by delaying each skill by an additional 100ms
+            // Delay the appearance and bar animation
             setTimeout(() => {
+                skillDiv.style.opacity = '1'; // Fade in effect
                 skillLevel.style.width = skill.level; // Set the actual width from JSON
-            }, index * 100); // Delay increases with each skill
+            }, 100 * index); // Each skill appears 100ms after the previous one
         });
 
     } catch (error) {
