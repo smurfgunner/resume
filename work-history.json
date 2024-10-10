@@ -1,0 +1,33 @@
+{
+    "jobs": [
+        {
+            "title": "Namava - Senior Software Engineer, IOS",
+            "location": "Tehran, Iran (Remote)",
+            "dates": "11/2022 - Current",
+            "tasks": [
+                "Design and maintain Video Player SDK.",
+                "Lead a rewrite of project, designing a Clean Architecture for both high level and low level components.",
+                "Deploy Fastlane into GitLab CI to ensure code quality, test coverage, and seamless deployment.",
+                "Mentor developers through 1-on-1 talks, code reviews, and educational sessions."
+            ]
+        },
+        {
+            "title": "StrAIberry - IOS Engineer",
+            "location": "Vancouver, Canada (Remote)",
+            "dates": "10/2020 - 11/2022",
+            "tasks": [
+                "Translate UI designs into smooth software.",
+                "Embed object detection ML model into interactive UI."
+            ]
+        },
+        {
+            "title": "Contractor - Software Developer",
+            "location": "Urmia, Iran",
+            "dates": "10/2015 - 09/2020",
+            "tasks": [
+                "Develop server-side applications using Node.JS framework, integrated with MongoDB.",
+                "Maintain existing Flutter codebase, fix bugs, and develop new features."
+            ]
+        }
+    ]
+}
