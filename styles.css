@@ -21,25 +21,53 @@ body {
 
 /* Desktop Layout: Two Columns */
 .columns {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Column A (1 part) and Column B (2 parts) */
-    grid-gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-/* Individual Column Styling */
-.column {
-    padding: 0 20px;
+.personal-info,
+.skills,
+.education {
+    flex-basis: 30%; /* Column A sections take 30% */
 }
 
-/* Column A (Personal Info, Skills, Education) */
-#column-a {
-    padding-right: 20px;
-    border-right: 1px solid #e0e0e0; /* Subtle divider */
+.summary,
+.work-history {
+    flex-basis: 60%; /* Column B sections take 60% */
 }
 
-/* Column B (Summary and Work History) */
-#column-b {
-    padding-left: 20px;
+/* Mobile Layout: Stacking sections in one column with custom order */
+@media (max-width: 768px) {
+    .columns {
+        display: flex;
+        flex-direction: column; /* Stack all sections vertically */
+    }
+
+    .personal-info {
+        order: 1; /* Personal Info at the top */
+    }
+
+    .summary {
+        order: 2; /* Summary comes second */
+    }
+
+    .work-history {
+        order: 3; /* Work History comes third */
+    }
+
+    .skills {
+        order: 4; /* Skills come fourth */
+    }
+
+    .education {
+        order: 5; /* Education comes last */
+    }
+
+    /* Ensure all sections take full width on mobile */
+    .personal-info, .skills, .education, .summary, .work-history {
+        flex-basis: 100%; /* Full width on mobile */
+    }
 }
 
 /* Header (Personal Info) */

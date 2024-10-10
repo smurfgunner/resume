@@ -14,54 +14,51 @@
 <body>
     <div class="container">
         <div class="columns">
-            <!-- Column A (Personal Info, Skills, Education) -->
-            <div class="column" id="column-a">
-                <section class="personal-info">
-                    <header>
-                        <h1>Vahid Ghanbarpour</h1>
-                        <p><i class="fas fa-phone-alt"></i> +989010206618</p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:vahidgr@yahoo.com">vahidgr@yahoo.com</a></p>
-                        <p><i class="fas fa-map-marker-alt"></i> Urmia, WA, Iran</p>
-                        <p><i class="fab fa-github"></i> <a href="https://github.com/VahidGR" target="_blank">GitHub</a></p>
-                    </header>
-                </section>
+            <!-- Personal Info (Column A Section) -->
+            <section class="personal-info">
+                <header>
+                    <h1>Vahid Ghanbarpour</h1>
+                    <p><i class="fas fa-phone-alt"></i> +989010206618</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:vahidgr@yahoo.com">vahidgr@yahoo.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Urmia, WA, Iran</p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/VahidGR" target="_blank">GitHub</a></p>
+                </header>
+            </section>
     
-                <section class="skills">
-                    <h2>Skills</h2>
-                    <div id="skills-container"></div> <!-- Skills will be dynamically loaded -->
-                </section>
+            <!-- Professional Summary (Column B Section) -->
+            <section class="summary">
+                <h2>Professional Summary</h2>
+                <p>
+                    I bring over 8 years of experience as an iOS Engineer, demonstrating proficiency in writing clean code and applying OOP principles.
+                </p>
+            </section>
     
-                <section class="education">
-                    <h2>Education</h2>
-                    <p><strong>AB Highschool, Urmia, WA, Iran</strong> • 07/2017 <br> High School Diploma</p>
-                </section>
-            </div>
+            <!-- Work History (Column B Section) -->
+            <section class="work-history">
+                <h2>Work History</h2>
+                <div class="job">
+                    <h3>Namava - Senior Software Engineer, IOS</h3>
+                    <p>Tehran, Iran (Remote) • 11/2022 - Current</p>
+                    <ul>
+                        <li>Design and maintain Video Player SDK.</li>
+                        <li>Lead a rewrite of project, designing a Clean Architecture for both high level and low level components.</li>
+                    </ul>
+                </div>
+            </section>
     
-            <!-- Column B (Professional Summary and Work History) -->
-            <div class="column" id="column-b">
-                <section class="summary">
-                    <h2>Professional Summary</h2>
-                    <p>
-                        I bring over 8 years of experience as an iOS Engineer, demonstrating proficiency in writing clean code and applying OOP principles.
-                        I have successfully delivered multiple apps to large user bases and overseen their distribution and integrity during development and production.
-                    </p>
-                </section>
+            <!-- Skills (Column A Section) -->
+            <section class="skills">
+                <h2>Skills</h2>
+                <div id="skills-container"></div>
+            </section>
     
-                <section class="work-history">
-                    <h2>Work History</h2>
-                    <div class="job">
-                        <h3>Namava - Senior Software Engineer, IOS</h3>
-                        <p>Tehran, Iran (Remote) • 11/2022 - Current</p>
-                        <ul>
-                            <li>Design and maintain Video Player SDK.</li>
-                            <li>Lead a rewrite of project, designing a Clean Architecture for both high level and low level components.</li>
-                        </ul>
-                    </div>
-                    <!-- Add other jobs here -->
-                </section>
-            </div>
+            <!-- Education (Column A Section) -->
+            <section class="education">
+                <h2>Education</h2>
+                <p><strong>AB Highschool, Urmia, WA, Iran</strong> • 07/2017 <br> High School Diploma</p>
+            </section>
         </div>
-    </div>    
+    </div>       
 
     <script src="script.js"></script> <!-- External JavaScript for loading skills from JSON -->
 </body>
