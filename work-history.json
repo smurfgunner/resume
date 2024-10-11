@@ -1,9 +1,19 @@
 {
     "jobs": [
         {
-            "title": "Namava - Senior Software Engineer, iOS",
+            "title": "Snapp - Senior Software Engineer, iOS",
             "location": "Tehran, Iran (Remote)",
-            "dates": "11/2022 - Current",
+            "dates": "09/2024 - Current",
+            "tasks": [
+                "Design a roadmap on how to avoid negative impact of code accross 2 similar projects, each having a passenger and a driver app.",
+                "Refactor and implement integration tests on 2 in-house frameworks.",
+                "Supervise these changes apply on various verticals accross 21 engineers."
+            ]
+        },
+        {
+            "title": "Namava - Senior iOS Engineer",
+            "location": "Tehran, Iran (Remote)",
+            "dates": "11/2022 - 09/2024",
             "tasks": [
                 "Design and maintain Video Player SDK.",
                 "Lead a rewrite of project, designing a Clean Architecture for both high level and low level components.",

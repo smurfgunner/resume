@@ -71,6 +71,10 @@ body {
 }
 
 @media (min-width: 769px) {
+    .container section {
+        margin-bottom: 0px; /* 40% reduction from the original 40px */
+    }
+
     .columns {
         display: grid;
         grid-template-columns: 1fr 2fr; /* Column A (1 part) and Column B (2 parts) */
@@ -266,4 +270,19 @@ h2 {
 a:hover {
     color: #007aff;
     transition: color 0.3s ease;
+}
+
+/* Interests Section Styling */
+.interests {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1; /* Light grey background to stand out */
+    border-left: 4px solid #007aff; /* Apple's blue as a subtle accent */
+}
+
+.interests h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #007aff; /* Standout header color */
+    margin-bottom: 10px;
 }
