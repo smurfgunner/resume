@@ -9,6 +9,14 @@ body {
     padding: 0;
 }
 
+.interests {
+    grid-column: span 2;
+    background-color: #e9ecef;
+    padding: 0px;
+    border-radius: 0px;
+    margin-bottom: 20px;
+}
+
 /* Base styling */
 .container {
     max-width: 1200px;
@@ -19,92 +27,58 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* Desktop Layout: Two Columns */
-.columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-.personal-info,
-.skills,
-.education {
-    flex-basis: 30%; /* Column A sections take 30% */
-}
 
-.summary,
-.work-history {
-    flex-basis: 60%; /* Column B sections take 60% */
-}
+@media (min-width: 769px) {
+    .container section {
+        margin-bottom: 0px;
+        max-height: fit-content;
+    }
 
-/* Mobile Layout: Stacking sections in one column with custom order */
-@media (max-width: 768px) {
+    .top-container {
+        display: grid;
+        grid-template-columns: 7fr 20fr;
+        grid-row-gap: 0px;
+        grid-column-gap: 40px;
+    }    
+
     .columns {
-        display: flex;
-        flex-direction: column; /* Stack all sections vertically */
+        display: grid;
+        grid-template-columns: 7fr 20fr;
+        gap: 40px; /* Horizontal space between columns */
+        grid-template-rows: min-content;
     }
 
     .personal-info {
         order: 1; /* Personal Info at the top */
+        max-height: fit-content;
     }
 
     .summary {
         order: 2; /* Summary comes second */
+        padding-top: 24px;
     }
 
     .work-history {
-        order: 3; /* Work History comes third */
+        order: 6; /* Work History comes third */
     }
 
     .skills {
         order: 4; /* Skills come fourth */
     }
 
-    .education {
-        order: 5; /* Education comes last */
-    }
-
-    /* Ensure all sections take full width on mobile */
-    .personal-info, .skills, .education, .summary, .work-history {
-        flex-basis: 100%; /* Full width on mobile */
-    }
-}
-
-@media (min-width: 769px) {
-    .container section {
-        margin-bottom: 0px; /* 40% reduction from the original 40px */
-    }
-
-    .columns {
-        display: grid;
-        grid-template-columns: 1fr 2fr; /* Column A (1 part) and Column B (2 parts) */
-        grid-gap: 40px;
-    }
-
-    .personal-info {
-        order: 1; /* Personal Info at the top */
-    }
-
-    .summary {
-        order: 2; /* Summary comes second */
-    }
-
-    .work-history {
-        order: 4; /* Work History comes third */
-    }
-
-    .skills {
-        order: 3; /* Skills come fourth */
+    .interests {
+        order: 3;
+        padding-left: 16px;
     }
 
     .education {
-        order: 5; /* Education comes last */
+        order: 6; /* Education comes last */
     }
 }
 
 /* Header (Personal Info) */
 header {
-    margin-bottom: 30px;
     text-align: left;
 }
 
@@ -230,8 +204,80 @@ h2 {
 }
 
 /* Work History */
-.work-history .job {
+.work-history {
     margin-bottom: 40px;
+}
+
+.job {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    font-family: "San Francisco", -apple-system, system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.job .location {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.job ul.tasks {
+    list-style: none;
+    padding-left: 0;
+}
+
+.job ul.tasks li {
+    margin-bottom: 6px;
+}
+
+/* Star Rating Container */
+.star-rating {
+    display: inline-flex;
+    margin-left: 0px;
+    margin-top: 0; /* Adjust top margin if needed */
+    margin-bottom: 0; /* Adjust bottom margin if needed */
+    padding-left: 5px; /* Space between app name and stars */
+}
+
+/* Font Awesome star sizes */
+.star-rating i {
+    font-size: 16px; /* Adjust star size */
+    color: #FFD700; /* Gold color for stars */
+    margin-right: 2px; /* Space between stars */
+}
+
+/* App Container Styles */
+.app-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* Additional style for the app name and stars */
+.apps a {
+    font-size: 14px;
+    color: #007aff; /* Apple link blue */
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.apps a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .job {
+        padding: 10px;
+    }
+    .apps a {
+        font-size: 12px;
+    }
 }
 
 .work-history h3 {
@@ -274,8 +320,7 @@ a:hover {
 
 /* Interests Section Styling */
 .interests {
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 8px;
     background-color: #f1f1f1; /* Light grey background to stand out */
     border-left: 4px solid #007aff; /* Apple's blue as a subtle accent */
 }
@@ -285,4 +330,55 @@ a:hover {
     font-weight: 400;
     color: #007aff; /* Standout header color */
     margin-bottom: 10px;
+}
+
+/* Mobile Layout: Stacking sections in one column with custom order */
+@media (max-width: 768px) {
+
+    .top-container {
+        display: inline-block;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: center; /* Centers the grid items horizontally */
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column; /* Stack all sections vertically */
+        flex-wrap: wrap;
+        justify-content: space-between;    
+    }
+
+    .personal-info {
+        order: 1; /* Personal Info at the top */
+    }
+
+    .summary {
+        order: 2; /* Summary comes second */
+    }
+
+    .work-history {
+        order: 4; /* Work History comes third */
+    }
+
+    .skills {
+        order: 5; /* Skills come fourth */
+    }
+
+    .education {
+        order: 6; /* Education comes last */
+    }
+
+    .interests {
+        order: 3;
+        padding-left: 16px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        padding-right: 8px;
+    }
+
+    /* Ensure all sections take full width on mobile */
+    .personal-info, .skills, .education, .summary, .work-history {
+        flex-basis: 100%; /* Full width on mobile */
+    }
 }

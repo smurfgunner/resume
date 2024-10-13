@@ -44,6 +44,41 @@ async function loadSkills() {
     }
 }
 
+// Function to generate star ratings with Font Awesome
+function generateStarRating(rating) {
+    const maxStars = 5;
+    const fullStars = Math.floor(rating); // Full stars
+    const halfStar = rating % 1 >= 0.5 ? 1 : 0; // Half star if rating is .5 or more
+    const emptyStars = maxStars - fullStars - halfStar; // Empty stars
+
+    const starDiv = document.createElement('div');
+    starDiv.classList.add('star-rating');
+
+    // Add full stars
+    for (let i = 0; i < fullStars; i++) {
+        const fullStar = document.createElement('i');
+        fullStar.classList.add('fas', 'fa-star'); // Full star icon
+        starDiv.appendChild(fullStar);
+    }
+
+    // Add half star if applicable
+    if (halfStar) {
+        const halfStarEl = document.createElement('i');
+        halfStarEl.classList.add('fas', 'fa-star-half-alt'); // Half star icon
+        starDiv.appendChild(halfStarEl);
+    }
+
+    // Add empty stars
+    for (let i = 0; i < emptyStars; i++) {
+        const emptyStar = document.createElement('i');
+        emptyStar.classList.add('far', 'fa-star'); // Empty star icon
+        starDiv.appendChild(emptyStar);
+    }
+
+    return starDiv;
+}
+
+
 // Function to load work history from the JSON file
 async function loadWorkHistory() {
     try {
@@ -61,15 +96,15 @@ async function loadWorkHistory() {
             jobDiv.classList.add('job');
 
             const jobTitle = document.createElement('h3');
-            jobTitle.textContent = job.title;
+            jobTitle.innerHTML = job.title;
 
             const jobLocation = document.createElement('p');
-            jobLocation.textContent = `${job.location} • ${job.dates}`;
+            jobLocation.innerHTML = `${job.location} • ${job.dates}`;
 
             const jobTasks = document.createElement('ul');
             job.tasks.forEach(task => {
                 const taskItem = document.createElement('li');
-                taskItem.textContent = task;
+                taskItem.innerHTML = task;
                 jobTasks.appendChild(taskItem);
             });
 
@@ -77,6 +112,32 @@ async function loadWorkHistory() {
             jobDiv.appendChild(jobTitle);
             jobDiv.appendChild(jobLocation);
             jobDiv.appendChild(jobTasks);
+            
+            // Create app links with ratings
+            if (job.appstore && job.appstore.length > 0) {
+                const appLinksDiv = document.createElement('div');
+                appLinksDiv.classList.add('apps');
+
+                job.appstore.forEach(app => {
+                    const appLink = document.createElement('a');
+                    appLink.href = app.link;
+                    appLink.textContent = app.app;
+                    appLink.target = '_blank';
+                    appLink.style.marginLeft = '12px'; // Space between app name and stars
+
+                    // Create the star rating component
+                    const ratingDiv = generateStarRating(app.rating);
+
+                    const appContainer = document.createElement('div');
+                    appContainer.classList.add('app-container');
+                    appContainer.appendChild(ratingDiv);
+                    appContainer.appendChild(appLink);
+
+                    appLinksDiv.appendChild(appContainer);
+                });
+
+                jobDiv.appendChild(appLinksDiv);
+            }
             workHistoryContainer.appendChild(jobDiv);
         });
     } catch (error) {

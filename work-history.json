@@ -8,6 +8,28 @@
                 "Design a roadmap on how to avoid negative impact of code accross 2 similar projects, each having a passenger and a driver app.",
                 "Refactor and implement integration tests on 2 in-house frameworks.",
                 "Supervise these changes apply on various verticals accross 21 engineers."
+            ],
+            "appstore": [
+                {
+                    "app": "Snapp Passenger",
+                    "link": "https://apps.apple.com/us/app/%D8%A7%D8%B3%D9%86%D9%BE-%D8%AA%D8%A7%DA%A9%D8%B3%DB%8C-%D8%BA%D8%B0%D8%A7-%D8%B3%D9%88%D9%BE%D8%B1%D9%85%D8%A7%D8%B1%DA%A9%D8%AA/id996370173",
+                    "rating": 4.4
+                },
+                {
+                    "app": "Snapp Driver",
+                    "link": "https://apps.apple.com/us/app/%D8%A7%D8%B3%D9%86%D9%BE-%D8%B1%D8%A7%D9%86%D9%86%D8%AF%DA%AF%D8%A7%D9%86-snapp-driver/id6449247898",
+                    "rating": 3.6
+                },
+                {
+                    "app": "Baly Passenger",
+                    "link": "https://apps.apple.com/us/app/baly-%D8%A8%D9%84%D9%8A/id1590560595",
+                    "rating": 4.0
+                },
+                {
+                    "app": "Baly Driver",
+                    "link": "https://apps.apple.com/us/app/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D8%A7%D9%84%D9%86%D9%82%D9%84-%D8%A8%D9%84%D9%8A-%D9%83%D8%A7%D8%A8%D8%AA%D9%86/id1605807171",
+                    "rating": 3
+                }
             ]
         },
         {
@@ -15,11 +37,12 @@
             "location": "Tehran, Iran (Remote)",
             "dates": "11/2022 - 09/2024",
             "tasks": [
-                "Design and maintain Video Player SDK.",
-                "Lead a rewrite of project, designing a Clean Architecture for both high level and low level components.",
-                "Deploy Fastlane into GitLab CI to ensure code quality, test coverage, and seamless deployment.",
-                "Mentor developers through 1-on-1 talks, code reviews, and educational sessions."
-            ]
+                "Design and maintain <strong>Video Player SDK</strong>.",
+                "Lead a rewrite of project, designing a <strong>Clean Architecture</strong> for both high level and low level components.",
+                "Deploy <strong>Fastlane</strong> into GitLab CI to ensure code quality, test coverage, and seamless deployment.",
+                "<strong>Mentor</strong> developers through 1-on-1 talks, code reviews, and educational sessions."
+            ],
+            "appstore": []
         },
         {
             "title": "StrAIberry - iOS Engineer",
@@ -28,6 +51,13 @@
             "tasks": [
                 "Translate UI designs into smooth software.",
                 "Embed object detection ML model into interactive UI."
+            ],
+            "appstore": [
+                {
+                    "app": "StrAIberry",
+                    "link": "https://apps.apple.com/us/app/straiberry/id1590739929",
+                    "rating": 5
+                }
             ]
         },
         {
@@ -38,7 +68,8 @@
                 "Develop server-side applications using Node.JS framework, integrated with MongoDB.",
                 "Maintain existing Flutter codebase, fix bugs, and develop new features.",
                 "Create many Swift apps in Fintech, delivery and education sectors."
-            ]
+            ],
+            "appstore": []
         }
     ]
 }
