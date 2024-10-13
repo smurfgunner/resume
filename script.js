@@ -112,7 +112,7 @@ async function loadWorkHistory() {
             jobDiv.appendChild(jobTitle);
             jobDiv.appendChild(jobLocation);
             jobDiv.appendChild(jobTasks);
-            
+
             // Create app links with ratings
             if (job.appstore && job.appstore.length > 0) {
                 const appLinksDiv = document.createElement('div');
@@ -145,8 +145,32 @@ async function loadWorkHistory() {
     }
 }
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA6G9Rq2ICJq8WPFSkibjR6yg2tMtcv0Mg",
+  authDomain: "resume-6da5b.firebaseapp.com",
+  projectId: "resume-6da5b",
+  storageBucket: "resume-6da5b.appspot.com",
+  messagingSenderId: "103551032176",
+  appId: "1:103551032176:web:4c3aadc83e22a195d80db5",
+  measurementId: "G-EMZR5E1K80"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 // Load work history when the page loads
 window.onload = function() {
     loadSkills(); // Call to load skills (from the earlier example)
     loadWorkHistory(); // Call to load work history
+    logEvent(analytics, 'view_content');
 };
