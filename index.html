@@ -10,6 +10,9 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <script src="https://www.gstatic.com/firebasejs/9.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.0/firebase-compat.js"></script>
 </head>
 <body>
     <div class="container">
@@ -64,6 +67,32 @@
         </div>
     </div>       
 
-    <script src="script.js"></script> <!-- External JavaScript for loading skills from JSON -->
+    <script type="module" src="script.js"></script> <!-- External JavaScript for loading skills from JSON -->
+    <script>
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyA6G9Rq2ICJq8WPFSkibjR6yg2tMtcv0Mg",
+            authDomain: "resume-6da5b.firebaseapp.com",
+            projectId: "resume-6da5b",
+            storageBucket: "resume-6da5b.appspot.com",
+            messagingSenderId: "103551032176",
+            appId: "1:103551032176:web:4c3aadc83e22a195d80db5",
+            measurementId: "G-EMZR5E1K80"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        // Initialize Analytics
+        const analytics = firebase.analytics();
+
+
+        // Example function to log an event
+        function logEvent(eventName, eventParams) {
+            analytics.logEvent(eventName, eventParams);
+        }
+
+        logEvent('view_content');
+
+    </script>
 </body>
 </html>
