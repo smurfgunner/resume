@@ -6,6 +6,10 @@
         { "name": "XCTest", "level": "90%" },
         { "name": "Git", "level": "85%" },
         { "name": "SOLID", "level": "100%" },
-        { "name": "Protocol-oriented-Programming", "level": "100%" }
+        { "name": "Protocol-oriented-Programming", "level": "100%" },
+        { "name": "UIKit", "level": "95%" },
+        { "name": "SwiftUI", "level": "95%" },
+        { "name": "RxSwift", "level": "80%" },
+        { "name": "Combine", "level": "90%" }
     ]
 }
