@@ -1,15 +1,24 @@
 {
     "skills": [
-        { "name": "Swift", "level": "95%" },
         { "name": "Software Architecture", "level": "95%" },
-        { "name": "SDK development", "level": "95%" },
-        { "name": "XCTest", "level": "90%" },
-        { "name": "Git", "level": "85%" },
-        { "name": "SOLID", "level": "100%" },
+        { "name": "SOLID principles", "level": "100%" },
+        { "name": "Clean Architecture", "level": "95%" },
+        { "name": "Agile Methodologies (Scrum & Kanban)", "level": "90%" },
+        { "name": "Swift", "level": "95%" },
         { "name": "Protocol-oriented-Programming", "level": "100%" },
+        { "name": "OOP (Object-Oriented Programming)", "level": "95%" },
+        { "name": "Swift Generics", "level": "90%" },
+        { "name": "SDK development", "level": "95%" },
         { "name": "UIKit", "level": "95%" },
         { "name": "SwiftUI", "level": "95%" },
-        { "name": "RxSwift", "level": "80%" },
-        { "name": "Combine", "level": "90%" }
+        { "name": "MVVM", "level": "100%" },
+        { "name": "VIPER", "level": "100%" },
+        { "name": "MVC", "level": "100%" },
+        { "name": "XCTest", "level": "90%" },
+        { "name": "Test-Driven Development (TDD)", "level": "95%" },
+        { "name": "Git", "level": "85%" },
+        { "name": "Core ML", "level": "60%" },
+        { "name": "Vision Framework", "level": "50%" },
+        { "name": "Core Graphics", "level": "55%" }
     ]
 }

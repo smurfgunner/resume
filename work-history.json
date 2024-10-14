@@ -5,9 +5,9 @@
             "location": "Tehran, Iran (Remote)",
             "dates": "09/2024 - Current",
             "tasks": [
-                "Design a roadmap on how to avoid negative impact of code accross 2 similar projects, each having a passenger and a driver app.",
-                "Refactor and implement integration tests on 2 in-house frameworks.",
-                "Supervise these changes apply on various verticals accross 21 engineers."
+                "Design a roadmap on how to avoid negative impact of code across 2 similar projects, each having a passenger and a driver app.",
+                "Refactor and implement <strong>integration tests</strong> on 2 in-house frameworks.",
+                "Supervise these changes apply on various verticals across 21 engineers."
             ],
             "appstore": [
                 {
@@ -37,10 +37,15 @@
             "location": "Tehran, Iran (Remote)",
             "dates": "11/2022 - 09/2024",
             "tasks": [
-                "Design and maintain <strong>Video Player SDK</strong>.",
-                "Lead a rewrite of project, designing a <strong>Clean Architecture</strong> for both high level and low level components.",
-                "Deploy <strong>Fastlane</strong> into GitLab CI to ensure code quality, test coverage, and seamless deployment.",
-                "<strong>Mentor</strong> developers through 1-on-1 talks, code reviews, and educational sessions."
+                "Designed and deployed <strong>12 iOS SDKs</strong>, implementing <strong>Clean Architecture</strong> principles to ensure modularity and scalability. These SDKs are now a cornerstone of our mobile apps, used across two projects.",
+                "Architected a modular design with clear APIs, enabling colleagues to develop features with less code and greater reliability. This approach was driven by the principles of <strong>SAP (Stable Abstraction Principle)</strong> , <strong>CCP (Common Closure Principle)</strong> , and <strong>CRP (Common Reuse Principle)</strong>.",
+                "Implemented a custom <strong>Video Player</strong> within the new modular design, wrapping AVPlayer. This player has been highly praised for its performance and reliability, surpassing our Android and Web platforms.",
+                "Led the rewrite of the project using <strong>SwiftUI</strong> and <strong>Combine</strong>, transitioning from <strong>UIKit</strong> and <strong>RxSwift</strong>, and adding support for iPad. This rewrite emphasized software stability.",
+                "Applied <strong>SOLID principles</strong> and <strong>Protocol-Oriented Programming</strong> to design a flexible and maintainable codebase, following <strong>Clean Code</strong> practices to improve readability and reduce complexity.",
+                "Utilized <strong>TDD (Test-Driven Development)</strong> to enforce high-quality code standards, resulting in a significant reduction in bugs and ensuring the delivery of reliable and flawless features.",
+                "Emphasized <strong>DRY (Don't Repeat Yourself)</strong> and <strong>KISS (Keep It Simple, Stupid)</strong> principles in code reviews and development practices, leading to cleaner and more efficient code.",
+                "Conducted technical interviews as part of a two-step hiring process, including knowledge-based assessments and live coding or home assignments, contributing to the successful hiring of two iOS engineers.",
+                "Deployed primitive <strong>CI/CD</strong> using <strong>Fastlane</strong> and <strong>GitLab CI</strong>, ensuring sufficient test coverage and seamless releases."
             ],
             "appstore": []
         },
@@ -49,8 +54,9 @@
             "location": "Vancouver, Canada (Remote)",
             "dates": "10/2020 - 11/2022",
             "tasks": [
-                "Translate UI designs into smooth software.",
-                "Embed object detection ML model into interactive UI."
+                "Followed the <strong>MVVM-C</strong> architectural pattern to ensure clean and maintainable code, supported by end-to-end tests to validate functionality.",
+                "Developed and integrated advanced features such as <strong>object detection</strong> and target image capture using <strong>Vision framework</strong>, <strong>Core ML</strong>, <strong>TF-Lite</strong>, and <strong>LibTorch</strong>, following the evolution of our machine learning models.",
+                "Created custom charts with <strong>Core Graphics</strong> and <strong>Core Animation</strong> and other key app functionalities including push notifications, secure user authentication via <strong>Cognito</strong>, and a customized reminder system using <strong>Core Data</strong> and <strong>EventKit</strong>."
             ],
             "appstore": [
                 {
@@ -61,13 +67,26 @@
             ]
         },
         {
-            "title": "Contractor - Software Developer",
-            "location": "Urmia, Iran",
-            "dates": "10/2015 - 09/2020",
+            "title": "Urmis - iOS Developer",
+            "location": "Tehran, Iran (Remote)",
+            "dates": "10/2018 - 10/2020",
             "tasks": [
-                "Develop server-side applications using Node.JS framework, integrated with MongoDB.",
-                "Maintain existing Flutter codebase, fix bugs, and develop new features.",
-                "Create many Swift apps in Fintech, delivery and education sectors."
+                "Developed <strong>e-commerce</strong> applications using the <strong>MVVM</strong> architectural pattern and <strong>Test-Driven Development (TDD)</strong> principles, working towards testable code.",
+                "Programmatically composed user interfaces with <strong>UIKit</strong> and <strong>AutoLayout</strong>, optimizing for both iPhone and iPad screen sizes.",
+                "Identified and resolved performance bottlenecks using <strong>Instruments</strong>, optimizing memory and CPU usage with <strong>Grand Central Dispatch (GCD)</strong> techniques.",
+                "Implemented real-time delivery tracking features using <strong>MapKit</strong>, setting both smoothness and energy impact as priorities."
+            ],
+            "appstore": []
+        },
+        {
+            "title": "Self-Employed - Software Developer",
+            "location": "Urmia, Iran",
+            "dates": "10/2016 - 02/2018",
+            "tasks": [
+                "Engaged by six clients to develop and maintain iOS and cross-platform projects across various sectors including education, e-commerce, surveying, and food; utilizing <strong>Swift</strong>, <strong>React Native</strong> and <strong>Flutter</strong>.",
+                "Collaborated with clients to understand their needs and translate them into functional and user-friendly features.",
+                "Worked with a team of 7 to produce PvP and hypercasual in-house games using <strong>Unity3D</strong>.",
+                "Developed and maintained a <strong>Node.js</strong> backend with socket.io and MongoDB, supporting real-time multiplayer game functionality."
             ],
             "appstore": []
         }

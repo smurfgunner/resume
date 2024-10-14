@@ -75,6 +75,13 @@ body {
     .education {
         order: 6; /* Education comes last */
     }
+
+    .projects {
+        padding-left: 24px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        padding-right: 16px;
+    }
 }
 
 /* Header (Personal Info) */
@@ -380,5 +387,84 @@ a:hover {
     /* Ensure all sections take full width on mobile */
     .personal-info, .skills, .education, .summary, .work-history {
         flex-basis: 100%; /* Full width on mobile */
+    }
+}
+
+/* New Personal Projects Section */
+.projects {
+    margin-top: 40px;
+    background-color: #f1f1f1; /* Light grey background */
+    border-left: 4px solid #007aff; /* Apple's signature blue */
+}
+
+.projects h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #007aff; /* Signature blue */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+.projects .project {
+    margin-bottom: 30px;
+}
+
+.projects h3 {
+    font-family: "San Francisco", -apple-system, system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.projects p.description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.projects ul.features {
+    list-style: none;
+    padding-left: 0;
+}
+
+.projects ul.features li {
+    font-size: 14px;
+    color: #333;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 6px;
+}
+
+.projects ul.features li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007aff; /* Signature blue */
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .projects h2 {
+        font-size: 18px;
+    }
+
+    .projects h3 {
+        font-size: 16px;
+    }
+
+    .projects p.description {
+        font-size: 13px;
+    }
+
+    .projects ul.features li {
+        font-size: 13px;
+    }
+
+    .projects {
+        padding-left: 16px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        padding-right: 8px;
     }
 }
