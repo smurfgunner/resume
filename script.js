@@ -156,3 +156,8 @@ window.onload = function() {
     loadSkills(); // Call to load skills (from the earlier example)
     loadWorkHistory(); // Call to load work history
 };
+
+// Wait 10 seconds before showing the popup
+setTimeout(function() {
+    document.getElementById('visitor-popup').style.display = 'block';
+}, 5000);

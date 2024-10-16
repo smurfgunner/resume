@@ -16,6 +16,23 @@
 </head>
 <body>
     <div class="container">
+
+        <div id="visitor-popup" class="visitor-popup">
+            <div class="visitor-popup-content">
+                <h2>Hi!</h2>
+                <p>I'd love to know more about you.</p>
+                <form id="visitor-form">
+                    <input type="text" id="company" name="company" placeholder="Company" required>
+                    <input type="text" id="title" name="title" placeholder="Position" required>
+        
+                    <div class="form-buttons">
+                        <button type="button" id="cancel-btn">Cancel</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
         <div class="top-container">
             <!-- Personal Info (Column A Section) -->
             <section class="personal-info">
@@ -89,6 +106,11 @@
                     <h2>Education</h2>
                     <p><strong>AB Highschool, Urmia, WA, Iran</strong> • 07/2017 <br> High School Diploma</p>
                 </section>
+
+                <section class="coffee-invite">
+                    <h2>Would you like to grab a cup of coffee?</h2>
+                    <button id="coffee-btn">Yes!</button>
+                </section>                
             </section>
         </div>
     </div>       
@@ -118,6 +140,34 @@
         }
 
         logEvent('view_content');
+
+        // Event listener for the coffee button
+        document.getElementById('coffee-btn').addEventListener('click', function() {
+            logEvent('schedule_selected'); // Log event when 'Yes!' button is clicked
+            window.open('https://calendly.com/vahidgr-xtr0/30min', '_blank'); // Open Calendly in a new tab
+        });
+
+        // Handle form submission
+        document.getElementById('visitor-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from refreshing the page
+
+            // Get the input values
+            const company = document.getElementById('company').value;
+            const title = document.getElementById('title').value;
+
+            // Log the event to Firebase with company and title
+            logEvent('visitor_info', { company: company, title: title });
+
+            // Hide the popup after submission
+            document.getElementById('visitor-popup').style.display = 'none';
+        });
+
+        // Handle cancel button click
+        document.getElementById('cancel-btn').addEventListener('click', function() {
+            // Hide the popup without submitting
+            logEvent('refused_info_submission');
+            document.getElementById('visitor-popup').style.display = 'none';
+        });
 
     </script>
 </body>
