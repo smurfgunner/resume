@@ -16,23 +16,6 @@
 </head>
 <body>
     <div class="container">
-
-        <div id="visitor-popup" class="visitor-popup">
-            <div class="visitor-popup-content">
-                <h2>Hi!</h2>
-                <p>I'd love to know more about you.</p>
-                <form id="visitor-form">
-                    <input type="text" id="company" name="company" placeholder="Company" required>
-                    <input type="text" id="title" name="title" placeholder="Position" required>
-        
-                    <div class="form-buttons">
-                        <button type="button" id="cancel-btn">Cancel</button>
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        
         <div class="top-container">
             <!-- Personal Info (Column A Section) -->
             <section class="personal-info">
@@ -108,9 +91,21 @@
                 </section>
 
                 <section class="coffee-invite">
-                    <h2>Would you like to grab a cup of coffee?</h2>
-                    <button id="coffee-btn">Yes!</button>
-                </section>                
+                    <h2>Interested?</h2>
+                    <p>Let's grab a cup of coffee.</p>
+                    <button id="coffee-btn">Sure!</button>
+                </section>
+
+                <div class="visitor-popup-content">
+                    <p id="form-text">Let me know who you are.</p>
+                    <form id="visitor-form">
+                        <input type="text" id="company" name="company" placeholder="Company" required>
+                        <input type="text" id="title" name="title" placeholder="Position" required>
+                        <div class="form-buttons">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </section>
         </div>
     </div>       
@@ -159,7 +154,8 @@
             logEvent('visitor_info', { company: company, title: title });
 
             // Hide the popup after submission
-            document.getElementById('visitor-popup').style.display = 'none';
+            document.getElementById('visitor-form').style.display = 'none';
+            document.getElementById('form-text').textContent = "Thank You! 🥳";
         });
 
         // Handle cancel button click

@@ -36,7 +36,7 @@ async function loadSkills() {
             setTimeout(() => {
                 skillDiv.style.opacity = '1'; // Fade in effect
                 skillLevel.style.width = skill.level; // Set the actual width from JSON
-            }, 400 * (index + 1)); // Each skill appears 400ms after the previous one
+            }, 200 * (index + 1)); // Each skill appears 400ms after the previous one
         });
 
     } catch (error) {
@@ -158,6 +158,6 @@ window.onload = function() {
 };
 
 // Wait 10 seconds before showing the popup
-setTimeout(function() {
-    document.getElementById('visitor-popup').style.display = 'block';
-}, 5000);
+// setTimeout(function() {
+//     document.getElementById('visitor-popup').style.display = 'block';
+// }, 5000);
