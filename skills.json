@@ -3,7 +3,7 @@
         { "name": "Clean Architecture", "level": "95%" },
         { "name": "Swift", "level": "95%" },
         { "name": "Structured Concurrency", "level": "100%" },
-        { "name": "Swift Generics", "level": "90%" },
+        { "name": "Swift Generics", "level": "100%" },
         { "name": "SDK Development", "level": "95%" },
         { "name": "UIKit", "level": "95%" },
         { "name": "SwiftUI", "level": "95%" },
