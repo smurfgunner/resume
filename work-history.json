@@ -5,11 +5,11 @@
             "location": "Tehran, Iran (Remote)",
             "dates": "09/2024 - Current",
             "tasks": [
-                "Design a roadmap on how to avoid negative impact of code changes across 2 shared products, each supporting 2 projects.",
-                "Supervise chapter-wide testing strategy deployment and mentor 20 engineers.",
+                "Design a roadmap on how to avoid negative impact of code changes across 2 shared products, each supporting 2 distinct projects.",
+                "Supervise chapter-wide <strong>testing</strong> strategy deployment and <strong>mentor</strong> 20 engineers by <strong>hosting workshops</strong> and 1o1 troubleshooting.",
                 "Consult architectural refinements.",
                 "Refactor and implement <strong>integration tests</strong> on internal frameworks.",
-                "Implement face recognition and accessibility features on Driver apps."
+                "Implement face recognition and accessibility features utilizing <strong>Vision Framework</strong> following <strong>VIPER</strong> in composition with <strong>micro-services</strong>."
             ],
             "appstore": [
                 {
