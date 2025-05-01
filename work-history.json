@@ -9,7 +9,8 @@
                 "Supervise chapter-wide <strong>testing</strong> strategy deployment and <strong>mentor</strong> 20 engineers by <strong>hosting workshops</strong> and 1o1 troubleshooting.",
                 "Consult architectural refinements.",
                 "Refactor and implement <strong>integration tests</strong> on internal frameworks.",
-                "Implement face recognition and accessibility features utilizing <strong>Vision Framework</strong> following <strong>VIPER</strong> in composition with <strong>micro-services</strong>."
+                "Implement face recognition and accessibility features utilizing <strong>Vision Framework</strong> following <strong>VIPER</strong> in composition with <strong>micro-services</strong>.",
+                "Replace <strong>MQTT</strong> with <strong>SwiftNIO</strong> through abstraction and ensure integrity through component tests."
             ],
             "appstore": [
                 {
@@ -35,7 +36,7 @@
             ]
         },
         {
-            "title": "Namava - Senior iOS Engineer",
+            "title": "Sarzamin Shatel, Namava - Senior iOS Engineer",
             "location": "Tehran, Iran (Remote)",
             "dates": "11/2022 - 09/2024",
             "tasks": [
@@ -52,9 +53,9 @@
             "appstore": []
         },
         {
-            "title": "StrAIberry - iOS Engineer",
-            "location": "Vancouver, Canada (Remote)",
-            "dates": "10/2020 - 11/2022",
+            "title": "Toseeh Kalan Dadeh Iranian, StrAIberry - iOS Engineer",
+            "location": "Tehran, Iran (Remote)",
+            "dates": "12/2020 - 10/2022",
             "tasks": [
                 "Followed the <strong>MVVM-C</strong> architectural pattern to ensure clean and maintainable code, supported by end-to-end tests to validate functionality.",
                 "Developed and integrated advanced features such as <strong>object detection</strong> and target image capture using <strong>Vision framework</strong>, <strong>Core ML</strong>, <strong>TF-Lite</strong>, and <strong>LibTorch</strong>, following the evolution of our machine learning models.",
