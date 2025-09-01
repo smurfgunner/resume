@@ -8,13 +8,13 @@
                 "Plan migration form depricated <strong>ReactiveKit</strong> to a combination of <strong>Swift Concurrency</strong> and <strong>Combine</strong>.",
                 "Monitor app performance through <strong>datadog</strong> logs, <strong>profile</strong> using <strong>Instruments</strong>, implement optimized solutions and fix memory issues.",
                 "Define and maintain feature toggles for newly developed solutions, enabling proper <strong>A/B Testing</strong>.",
-                "Ensure app stability utilizing <strong>Unit</strong> and <strong>Component</strong> test through <strong>XCTest</strong> framework."
+                "Ensure app stability utilizing <strong>Unit</strong> and <strong>Component</strong> tests through <strong>XCTest</strong> framework."
             ],
             "appstore": [
                 {
-                    "app": "Snapp Passenger",
+                    "app": "Glovo customer",
                     "link": "https://apps.apple.com/us/app/glovo-food-delivery-takeaway/id951812684",
-                    "rating": 4.8
+                    "rating": 5
                 }
             ]
         },
