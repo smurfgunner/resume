@@ -19,17 +19,17 @@ async function loadSkills() {
             const skillName = document.createElement('span');
             skillName.textContent = skill.name;
 
-            const skillBar = document.createElement('div');
-            skillBar.classList.add('skill-bar');
+            // const skillBar = document.createElement('div');
+            // skillBar.classList.add('skill-bar');
 
-            const skillLevel = document.createElement('div');
-            skillLevel.classList.add('skill-level');
-            skillLevel.style.width = '0%'; // Initially set the width to 0%
+            // const skillLevel = document.createElement('div');
+            // skillLevel.classList.add('skill-level');
+            // skillLevel.style.width = '0%'; // Initially set the width to 0%
 
             // Append the skill name and the bar
-            skillBar.appendChild(skillLevel);
+            // skillBar.appendChild(skillLevel);
             skillDiv.appendChild(skillName);
-            skillDiv.appendChild(skillBar);
+            // skillDiv.appendChild(skillBar);
             skillsContainer.appendChild(skillDiv);
 
             // Delay the appearance and bar animation
