@@ -1,15 +1,34 @@
 {
     "jobs": [
         {
+            "title": "Glovo - iOS Software Engineer",
+            "location": "Barcelona, Spain (Hybrid)",
+            "dates": "07/2025 - Current",
+            "tasks": [
+                "Plan migration form depricated <strong>ReactiveKit</strong> to a combination of <strong>Swift Concurrency</strong> and <strong>Combine</strong>.",
+                "Monitor app performance through <strong>datadog</strong> logs, <strong>profile</strong> using <strong>Instruments</strong>, implement optimized solutions and fix memory issues.",
+                "Define and maintain feature toggles for newly developed solutions, enabling proper <strong>A/B Testing</strong>.",
+                "Ensure app stability utilizing <strong>Unit</strong> and <strong>Component</strong> test through <strong>XCTest</strong> framework."
+            ],
+            "appstore": [
+                {
+                    "app": "Snapp Passenger",
+                    "link": "https://apps.apple.com/us/app/glovo-food-delivery-takeaway/id951812684",
+                    "rating": 4.8
+                }
+            ]
+        },
+        {
             "title": "Snapp - Senior Software Engineer, iOS",
             "location": "Tehran, Iran (Remote)",
-            "dates": "09/2024 - Current",
+            "dates": "09/2024 - 06/2025",
             "tasks": [
                 "Design a roadmap on how to avoid negative impact of code changes across 2 shared products, each supporting 2 distinct projects.",
                 "Supervise chapter-wide <strong>testing</strong> strategy deployment and <strong>mentor</strong> 20 engineers by <strong>hosting workshops</strong> and 1o1 troubleshooting.",
                 "Consult architectural refinements.",
-                "Refactor and implement <strong>integration tests</strong> on internal frameworks.",
                 "Implement face recognition and accessibility features utilizing <strong>Vision Framework</strong> following <strong>VIPER</strong> in composition with <strong>micro-services</strong>.",
+                "Refactor and implement <strong>integration tests</strong> on owned modules using <strong>Testing</strong> framework.",
+                "Plan and excecute compatibility with <strong>Swift 6</strong> and <strong>strict concurrency</strong> in lower layers.",
                 "Replace <strong>MQTT</strong> with <strong>SwiftNIO</strong> through abstraction and ensure integrity through component tests."
             ],
             "appstore": [
