@@ -5,7 +5,8 @@
             "location": "Barcelona, Spain (Hybrid)",
             "dates": "07/2025 - Current",
             "tasks": [
-                "Plan migration form depricated <strong>ReactiveKit</strong> to a combination of <strong>Swift Concurrency</strong> and <strong>Combine</strong>.",
+                "Plan and implement migration form depricated <strong>ReactiveKit</strong> to full <strong>Swift Concurrency</strong>.",
+                "Define and author architectual and programming guidelines accross the company.",
                 "Monitor app performance through <strong>datadog</strong> logs, <strong>profile</strong> using <strong>Instruments</strong>, implement optimized solutions and fix memory issues.",
                 "Define and maintain feature toggles for newly developed solutions, enabling proper <strong>A/B Testing</strong>.",
                 "Ensure app stability utilizing <strong>Unit</strong> and <strong>Component</strong> tests through <strong>XCTest</strong> framework."
