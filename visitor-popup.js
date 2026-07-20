@@ -3,7 +3,7 @@ import { sendVisitorInfo } from './email-service.js';
 
 export function initVisitorPopup() {
     setTimeout(() => {
-        document.getElementById('visitor-popup').style.display = 'block';
+        document.getElementById('visitor-popup').style.display = 'flex';
     }, 5000);
 
     document.getElementById('visitor-form').addEventListener('submit', function(e) {

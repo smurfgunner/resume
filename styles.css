@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* General Styling */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -7,14 +11,6 @@ body {
     background-color: #f9f9f9; /* Soft off-white background */
     margin: 0;
     padding: 0;
-}
-
-.interests {
-    grid-column: span 2;
-    background-color: #e9ecef;
-    padding: 0px;
-    border-radius: 0px;
-    margin-bottom: 20px;
 }
 
 /* Base styling */
@@ -73,7 +69,7 @@ body {
     }
 
     .education {
-        order: 6; /* Education comes last */
+        order: 7; /* Education comes last */
     }
 
     .projects {
@@ -507,6 +503,7 @@ a:hover {
     font-weight: 600;
     color: #333;
     margin-bottom: 20px;
+    border-bottom: none;
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -565,6 +562,7 @@ a:hover {
 .visitor-popup-content input {
     width: 100%;
     height: 36px;
+    padding: 0 12px;
     margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid #ddd;
@@ -621,3 +619,165 @@ a:hover {
         transform: scale(1);
     }
 }
+/* Modal overlay for visitor popup */
+#visitor-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Focus styles for keyboard navigation */
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+    outline: 3px solid #007aff;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .skill-level,
+    .skill,
+    .coffee-invite,
+    .coffee-invite button,
+    .appstore-badge,
+    a {
+        transition: none;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1c1c1e;
+        color: #f5f5f7;
+    }
+    .container {
+        background-color: #2c2c2e;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    header h1 { color: #f5f5f7; }
+    header p { color: #aeaeb2; }
+    header p i { color: #0a84ff; }
+    header a { color: #0a84ff; }
+    h2 {
+        color: #f5f5f7;
+        border-bottom-color: #3a3a3c;
+    }
+    .job h3, .work-history h3 { color: #f5f5f7; }
+    .job { border-bottom-color: rgba(255, 255, 255, 0.1); }
+    .job .location, .work-history p { color: #aeaeb2; }
+    .work-history ul li { color: #d1d1d6; }
+    .work-history ul li::before { color: #0a84ff; }
+    .summary { color: #d1d1d6; }
+    .education p { color: #d1d1d6; }
+    .skill span { color: #f5f5f7; }
+    .skill-bar { background-color: #3a3a3c; }
+    .interests {
+        background-color: #3a3a3c;
+        border-left-color: #0a84ff;
+    }
+    .interests h2 { color: #0a84ff; }
+    .projects {
+        background-color: #3a3a3c;
+        border-left-color: #0a84ff;
+    }
+    .projects h2 { color: #0a84ff; }
+    .projects p.description { color: #aeaeb2; }
+    .projects ul.features li { color: #d1d1d6; }
+    .projects ul.features li::before { color: #0a84ff; }
+    .appstore-badge {
+        color: #0a84ff;
+        border-color: #0a84ff;
+    }
+    .apps a { color: #0a84ff; }
+    .coffee-invite {
+        background: linear-gradient(145deg, #3a3a3c, #2c2c2e);
+    }
+    .coffee-invite h2 { color: #f5f5f7; }
+    .visitor-popup-content {
+        background: #2c2c2e;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+    .visitor-popup-content h2 { color: #f5f5f7; }
+    .visitor-popup-content p { color: #aeaeb2; }
+    .visitor-popup-content input {
+        background: #3a3a3c;
+        border-color: #48484a;
+        color: #f5f5f7;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    .visitor-popup-content input::placeholder { color: #8e8e93; }
+    #cancel-btn {
+        background-color: #3a3a3c !important;
+        color: #f5f5f7 !important;
+        border-color: #48484a !important;
+    }
+    #cancel-btn:hover { background-color: #48484a !important; }
+    a:hover { color: #0a84ff; }
+    button:focus-visible,
+    input:focus-visible,
+    a:focus-visible {
+        outline-color: #0a84ff;
+    }
+}
+
+/* Print styles */
+@media print {
+    @page {
+        margin: 1.5cm;
+    }
+    body {
+        background: white;
+        color: #000;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .coffee-invite,
+    #visitor-popup {
+        display: none !important;
+    }
+    header a,
+    .apps a {
+        color: #000;
+        text-decoration: none;
+    }
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 10px;
+        color: #555;
+    }
+    a[href^="mailto:"]::after,
+    a[href^="tel:"]::after,
+    .appstore-badge::after {
+        content: none;
+    }
+    .interests,
+    .projects {
+        background-color: #f5f5f5;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .job,
+    .project {
+        page-break-inside: avoid;
+    }
+    .skill-level {
+        transition: none;
+    }
+}
+
