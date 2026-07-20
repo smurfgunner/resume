@@ -12,6 +12,7 @@
                   <meta http-equiv="Expires" content="0">
                     <script src="https://www.gstatic.com/firebasejs/9.12.0/firebase-app-compat.js"></script>
                     <script src="https://www.gstatic.com/firebasejs/9.12.0/firebase-analytics-compat.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -133,6 +134,9 @@
               <form id="visitor-form">
                 <input type="text" id="company" name="company" placeholder="Company" required>
                 <input type="text" id="title" name="title" placeholder="Position" required>
+                <p class="gdpr-notice">
+                  By submitting, you consent to your company and position being stored and processed by the site owner in accordance with GDPR Article 6(1)(f). You may request deletion at any time by emailing <a href="mailto:vahidgr@yahoo.com">vahidgr@yahoo.com</a>.
+                </p>
                 <div class="form-buttons">
                   <button type="submit">Submit</button>
                   <button type="button" id="cancel-btn">Cancel</button>
@@ -144,52 +148,6 @@
       </div>
     </div>
     
-    <script type="module" src="script.js"></script>
-    <script>
-      
-      const firebaseConfig = {
-        apiKey: "AIzaSyA6G9Rq2ICJq8WPFSkibjR6yg2tMtcv0Mg",
-        authDomain: "resume-6da5b.firebaseapp.com",
-        projectId: "resume-6da5b",
-        storageBucket: "resume-6da5b.appspot.com",
-        messagingSenderId: "103551032176",
-        appId: "1:103551032176:web:4c3aadc83e22a195d80db5",
-        measurementId: "G-EMZR5E1K80"
-      };
-      
-      // Initialize Firebase
-      const app = firebase.initializeApp(firebaseConfig);
-      // Initialize Analytics
-      const analytics = firebase.analytics();
-      
-      function logEvent(eventName, eventParams) {
-        analytics.logEvent(eventName, eventParams);
-      }
-      
-      logEvent('view_content');
-      
-      document.getElementById('coffee-btn').addEventListener('click', function() {
-        logEvent('schedule_selected');
-        window.open('https://calendly.com/vahidgr-xtr0/30min', '_blank');
-      });
-      
-      document.getElementById('visitor-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const company = document.getElementById('company').value;
-        const title = document.getElementById('title').value;
-        
-        logEvent('visitor_info', { company: company, title: title });
-        
-        document.getElementById('visitor-form').style.display = 'none';
-        document.getElementById('form-text').textContent = "Thank You! 🥳";
-      });
-      
-      document.getElementById('cancel-btn').addEventListener('click', function() {
-        logEvent('refused_info_submission');
-        document.getElementById('visitor-popup').style.display = 'none';
-      });
-      
-    </script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
