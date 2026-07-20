@@ -5,6 +5,7 @@
             "location": "Barcelona, Spain (Hybrid)",
             "dates": "07/2025 - Current",
             "tasks": [
+                "Rewrite the Product Details Page in modern <strong>TCA</strong>, <strong>Swift 6</strong> and <strong>Swift Concurrency</strong> to support food, retail and groceries. Screen is <strong>BDUI</strong> and every complex business logic is client driven, bringing a responsible and hybrid BDUI experience.",
                 "Plan and implement migration form deprecated <strong>ReactiveKit</strong> to full <strong>Swift Concurrency</strong>.",
                 "Define and author architectual and programming guidelines accross the company.",
                 "Monitor app performance through <strong>datadog</strong> logs, <strong>profile</strong> using <strong>Instruments</strong>, implement optimized solutions and fix memory issues.",
