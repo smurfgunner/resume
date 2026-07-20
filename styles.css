@@ -415,6 +415,27 @@ a:hover {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.appstore-badge {
+    font-size: 12px;
+    font-weight: 500;
+    color: #007aff;
+    text-decoration: none;
+    border: 1px solid #007aff;
+    border-radius: 5px;
+    padding: 2px 7px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.appstore-badge:hover {
+    background-color: #007aff;
+    color: #fff;
 }
 
 .projects p.description {
