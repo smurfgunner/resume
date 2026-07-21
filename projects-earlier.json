@@ -1,16 +1,6 @@
 {
     "projects": [
         {
-            "title": "Backend driven UI engine",
-            "dates": "08/2025 – Present",
-            "description": "A collection of libraries containing design, rendering engine and analytics wrapper designed to maximize product flexibility and optimal for A/B testing.",
-            "features": [
-                "Picaso: Standalone design system --SharedUIKit-- framework.",
-                "Davinci: Translate JSON into trackable actions and render UI.",
-                "Kowalski: Abstract analytics engine compatible with 3rd-party and in-house analytics technologies."
-            ]
-        },
-        {
             "title": "Personal Accounting App",
             "dates": "05/2024 – 07/2024",
             "description": "A SwiftUI app using the MV architectural design pattern & Vapor 4 backend powered by PostgreSQL database, allowing users to track, categorize, and share expenses seamlessly across devices with Apple Pay integration.",
