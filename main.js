@@ -8,8 +8,6 @@ import { renderProjects } from './projects-view.js';
 import { renderEducation } from './education-view.js';
 import { initAnalytics, logEvent } from './analytics.js';
 import { initEmail } from './email-service.js';
-import { initVisitorPopup } from './visitor-popup.js';
-
 initAnalytics(firebaseConfig);
 initEmail(emailConfig);
 
@@ -68,4 +66,3 @@ window.onload = async function() {
     }
 };
 
-initVisitorPopup();
