@@ -17,9 +17,12 @@ export function renderPersonalInfo(container, info) {
     locationP.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${info.location}`;
     header.appendChild(locationP);
 
-    const githubP = document.createElement('p');
-    githubP.innerHTML = `<i class="fab fa-github"></i> <a href="${info.github.url}" target="_blank">${info.github.handle}</a>`;
-    header.appendChild(githubP);
+    const githubAccounts = Array.isArray(info.github) ? info.github : [info.github];
+    githubAccounts.forEach(account => {
+        const githubP = document.createElement('p');
+        githubP.innerHTML = `<i class="fab fa-github"></i> <a href="${account.url}" target="_blank">${account.handle}</a>`;
+        header.appendChild(githubP);
+    });
 
     container.appendChild(header);
 }

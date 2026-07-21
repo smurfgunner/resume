@@ -611,47 +611,23 @@ a:focus-visible {
     }
 }
 
-/* Earlier Experience Collapsible Section */
+/* Earlier Experience Section */
 .earlier-experience {
     margin-top: 40px;
     border-top: 2px solid #e0e0e0;
+    padding-top: 8px;
 }
 
-.earlier-summary {
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 0;
-    user-select: none;
+.earlier-heading {
     color: #888;
     font-size: 18px;
     font-weight: 400;
-}
-
-.earlier-summary::-webkit-details-marker {
-    display: none;
-}
-
-.earlier-summary::marker {
-    content: none;
-}
-
-.earlier-chevron {
-    display: inline-block;
-    font-size: 22px;
-    color: #007aff;
-    transition: transform 0.2s ease;
-    line-height: 1;
-}
-
-.earlier-experience[open] .earlier-chevron {
-    transform: rotate(90deg);
+    border-bottom: none;
+    margin-bottom: 16px;
 }
 
 .earlier-content {
-    padding-top: 8px;
+    padding-top: 4px;
 }
 
 .earlier-subsection {
@@ -678,21 +654,12 @@ a:focus-visible {
     .earlier-experience {
         border-top-color: #3a3a3c;
     }
-    .earlier-summary {
+    .earlier-heading {
         color: #636366;
-    }
-    .earlier-chevron {
-        color: #0a84ff;
     }
     .earlier-subheading {
         color: #636366;
         border-bottom-color: #3a3a3c;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .earlier-chevron {
-        transition: none;
     }
 }
 

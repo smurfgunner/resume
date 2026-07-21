@@ -3,8 +3,14 @@
     "phone": "+34603105374",
     "email": "vahidgr@yahoo.com",
     "location": "Barcelona, Catalonia, Spain",
-    "github": {
-        "url": "https://github.com/VahidGR",
-        "handle": "/VahidGR"
-    }
+    "github": [
+        {
+            "url": "https://github.com/vahidgr",
+            "handle": "/vahidgr"
+        },
+        {
+            "url": "https://github.com/smurfgunner",
+            "handle": "/smurfgunner"
+        }
+    ]
 }
