@@ -19,30 +19,19 @@
       <div class="top-container">
         <!-- Personal Info (Column A Section) -->
         <section class="personal-info">
-          <header>
-            <h1>Vahid Ghanbarpour</h1>
-            <p><i class="fas fa-phone-alt"></i> +34603105374</p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:vahidgr@yahoo.com">vahidgr@yahoo.com</a></p>
-            <p><i class="fas fa-map-marker-alt"></i> Barcelona, Catalonia, Spain</p>
-            <p><i class="fab fa-github"></i> <a href="https://github.com/VahidGR" target="_blank">/VahidGR</a></p>
-          </header>
+          <div id="personal-info-container"></div>
         </section>
         
         <!-- Professional Summary (Column B Section) -->
         <section class="summary">
           <h2>Professional Summary</h2>
-          <p>
-          I bring 10 years of experience as an iOS Engineer, demonstrating proficiency in writing <strong>clean code</strong> & applying OOP principles. I
-          possess a track record of successfully delivering multiple apps to large user bases, overseeing their distribution & integrity during
-          development & production. I have consistently built strong relationships with colleagues at every workplace and have been a
-          reliable and valued team member.
-          </p>
+          <div id="summary-container"></div>
         </section>
         
         <!-- Interests Section (within Professional Summary) -->
         <section class="interests">
           <h2>Interests</h2>
-          <p>I am highly active in hackathons and enthusiastic about participating in tech meetups, representing companies I work for. I look forward to sharing my passion for innovation and technology in such events.</p>
+          <div id="interests-container"></div>
         </section>
       </div>
       
@@ -55,81 +44,7 @@
           <!-- Personal Projects Section -->
           <section class="projects">
             <h2>Personal Projects</h2>
-            <div class="project">
-              <h3>Campfire Games <a href="https://apps.apple.com/app/campfire-games/id6775077580" target="_blank" class="appstore-badge"><i class="fab fa-app-store-ios"></i> App Store</a></h3>
-              <p>2025 – Present</p>
-              <p class="description">A party game iOS app featuring 13 AI-powered games (truth or dare, never have I ever, hot takes, spy mode, charades, story mode) using Apple's <strong>Foundation Models</strong> for fully on-device prompt generation — no internet required. One-time purchase, no subscriptions, privacy-first (no data collected).</p>
-              <ul class="features">
-                <li>On-device AI using Apple's Foundation Models framework</li>
-                <li>13 game modes with infinite, non-repeating prompts</li>
-                <li>Three intensity levels: Mild, Spicy, Unhinged</li>
-                <li>Supports 5 languages; compatible with iPhone 15 Pro+ and iPad/Mac with M-series chips</li>
-              </ul>
-            </div>
-            <div class="project">
-              <h3>Roulette de Movie <a href="https://apps.apple.com/app/roulette-de-movie/id6774653276" target="_blank" class="appstore-badge"><i class="fab fa-app-store-ios"></i> App Store</a></h3>
-              <p>2025 – Present</p>
-              <p class="description">A free iOS utility app that solves movie-night indecision by letting users build a personal watchlist and spin a roulette wheel to pick what to watch next. Fully local, privacy-first — no account, no data collection.</p>
-              <ul class="features">
-                <li>Movie search and personal collection management</li>
-                <li>Spin-wheel randomizer with haptic feedback</li>
-                <li>Watched status tracking with badge system</li>
-                <li>15 languages supported; all data stored locally on device</li>
-              </ul>
-            </div>
-            <div class="project">
-              <h3>Powder — BDUI Rendering Framework</h3>
-              <p>12/2025 – Present</p>
-              <p class="description">A cross-platform Swift framework that renders entire screens and SwiftUI components from JSON at compile time with optimized performance. Ships as a dynamic <strong>XCFramework</strong> targeting iOS 16+ and macOS 14+, with a built-in <strong>analytics</strong> pipeline and <strong>A/B experimentation</strong> engine.</p>
-              <ul class="features">
-                <li>Compile-time JSON-to-SwiftUI rendering — no runtime interpretation overhead</li>
-                <li>A/B experimentation engine with assignment, targeting, and resolution</li>
-                <li>Built-in analytics pipeline (collection, aggregation, provider bridging)</li>
-                <li>Distributed as a cross-platform XCFramework (iOS 16+, macOS 14+)</li>
-              </ul>
-            </div>
-            <div class="project">
-              <h3>Bakery — Native macOS BDUI Design Tool</h3>
-              <p>01/2026 – Present</p>
-              <p class="description">A native macOS SwiftUI design tool for authoring BDUI screens and components, rendered in real-time by Powder inside the canvas — similar in concept to Figma. The design output is a JSON file consumed directly by Powder on client apps, making what you design in Bakery exactly what users see in production.</p>
-              <ul class="features">
-                <li>Real-time WYSIWYG canvas powered by the Powder rendering engine</li>
-                <li>JSON-first output consumed directly by Powder on client apps</li>
-                <li>Experimentation hub for designing and previewing A/B test variants</li>
-                <li>WebSocket-powered real-time collaboration</li>
-                <li>Localization support for multi-language screen authoring</li>
-              </ul>
-            </div>
-            <div class="project">
-              <h3>Backend driven UI engine</h3>
-              <p>08/2025 – Present</p>
-              <p class="description">A collection of libraries containing design, rendering engine and analytics wrapper designed to maximize product flexibility and optimal for A/B testing.</p>
-              <ul class="features">
-                <li>Picaso: Standalone design system --SharedUIKit-- framework.</li>
-                <li>Davinci: Translate JSON into trackable actions and render UI.</li>
-                <li>Kowalski: Abstract analytics engine compatible with 3rd-party and in-house analytics technologies.</li>
-              </ul>
-            </div>
-            <div class="project">
-              <h3>Personal Accounting App</h3>
-              <p>05/2024 – 07/2024</p>
-              <p class="description">A SwiftUI app using the MV architectural design pattern & Vapor 4 backend powered by PostgreSQL database, allowing users to track, categorize, and share expenses seamlessly across devices with Apple Pay integration.</p>
-              <ul class="features">
-                <li>Auto import expenses using Apple Pay</li>
-                <li>Family & Friends expense sharing</li>
-                <li>Weekly expense report notifications</li>
-              </ul>
-            </div>
-            <div class="project">
-              <h3>Cryptocurrency Market Prediction</h3>
-              <p>12/2017 – 07/2018</p>
-              <p class="description">An app leveraging LSTM models with historical data to predict cryptocurrency trends. Developed using SwiftUI, Node.js, MongoDB, and integrated with real-time data feeds using WebSockets.</p>
-              <ul class="features">
-                <li>Real-time cryptocurrency rates</li>
-                <li>Prediction model using LSTM</li>
-                <li>Cross-platform syncing with RESTful APIs</li>
-              </ul>
-            </div>
+            <div id="projects-container"></div>
           </section>
         </section>
         
@@ -142,7 +57,7 @@
           <!-- Education (Column A Section) -->
           <section class="education">
             <h2>Education</h2>
-            <p><strong>AB Highschool, Urmia, WA, Iran</strong> • 07/2017 <br> High School Diploma</p>
+            <div id="education-container"></div>
           </section>
           
           <section class="coffee-invite">

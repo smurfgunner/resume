@@ -1,0 +1,85 @@
+{
+    "projects": [
+        {
+            "title": "Campfire Games",
+            "appstore": {
+                "link": "https://apps.apple.com/app/campfire-games/id6775077580"
+            },
+            "dates": "2025 – Present",
+            "description": "A party game iOS app featuring 13 AI-powered games (truth or dare, never have I ever, hot takes, spy mode, charades, story mode) using Apple’s <strong>Foundation Models</strong> for fully on-device prompt generation — no internet required. One-time purchase, no subscriptions, privacy-first (no data collected).",
+            "features": [
+                "On-device AI using Apple’s Foundation Models framework",
+                "13 game modes with infinite, non-repeating prompts",
+                "Three intensity levels: Mild, Spicy, Unhinged",
+                "Supports 5 languages; compatible with iPhone 15 Pro+ and iPad/Mac with M-series chips"
+            ]
+        },
+        {
+            "title": "Roulette de Movie",
+            "appstore": {
+                "link": "https://apps.apple.com/app/roulette-de-movie/id6774653276"
+            },
+            "dates": "2025 – Present",
+            "description": "A free iOS utility app that solves movie-night indecision by letting users build a personal watchlist and spin a roulette wheel to pick what to watch next. Fully local, privacy-first — no account, no data collection.",
+            "features": [
+                "Movie search and personal collection management",
+                "Spin-wheel randomizer with haptic feedback",
+                "Watched status tracking with badge system",
+                "15 languages supported; all data stored locally on device"
+            ]
+        },
+        {
+            "title": "Powder — BDUI Rendering Framework",
+            "dates": "12/2025 – Present",
+            "description": "A cross-platform Swift framework that renders entire screens and SwiftUI components from JSON at compile time with optimized performance. Ships as a dynamic <strong>XCFramework</strong> targeting iOS 16+ and macOS 14+, with a built-in <strong>analytics</strong> pipeline and <strong>A/B experimentation</strong> engine.",
+            "features": [
+                "Compile-time JSON-to-SwiftUI rendering — no runtime interpretation overhead",
+                "A/B experimentation engine with assignment, targeting, and resolution",
+                "Built-in analytics pipeline (collection, aggregation, provider bridging)",
+                "Distributed as a cross-platform XCFramework (iOS 16+, macOS 14+)"
+            ]
+        },
+        {
+            "title": "Bakery — Native macOS BDUI Design Tool",
+            "dates": "01/2026 – Present",
+            "description": "A native macOS SwiftUI design tool for authoring BDUI screens and components, rendered in real-time by Powder inside the canvas — similar in concept to Figma. The design output is a JSON file consumed directly by Powder on client apps, making what you design in Bakery exactly what users see in production.",
+            "features": [
+                "Real-time WYSIWYG canvas powered by the Powder rendering engine",
+                "JSON-first output consumed directly by Powder on client apps",
+                "Experimentation hub for designing and previewing A/B test variants",
+                "WebSocket-powered real-time collaboration",
+                "Localization support for multi-language screen authoring"
+            ]
+        },
+        {
+            "title": "Backend driven UI engine",
+            "dates": "08/2025 – Present",
+            "description": "A collection of libraries containing design, rendering engine and analytics wrapper designed to maximize product flexibility and optimal for A/B testing.",
+            "features": [
+                "Picaso: Standalone design system --SharedUIKit-- framework.",
+                "Davinci: Translate JSON into trackable actions and render UI.",
+                "Kowalski: Abstract analytics engine compatible with 3rd-party and in-house analytics technologies."
+            ]
+        },
+        {
+            "title": "Personal Accounting App",
+            "dates": "05/2024 – 07/2024",
+            "description": "A SwiftUI app using the MV architectural design pattern & Vapor 4 backend powered by PostgreSQL database, allowing users to track, categorize, and share expenses seamlessly across devices with Apple Pay integration.",
+            "features": [
+                "Auto import expenses using Apple Pay",
+                "Family & Friends expense sharing",
+                "Weekly expense report notifications"
+            ]
+        },
+        {
+            "title": "Cryptocurrency Market Prediction",
+            "dates": "12/2017 – 07/2018",
+            "description": "An app leveraging LSTM models with historical data to predict cryptocurrency trends. Developed using SwiftUI, Node.js, MongoDB, and integrated with real-time data feeds using WebSockets.",
+            "features": [
+                "Real-time cryptocurrency rates",
+                "Prediction model using LSTM",
+                "Cross-platform syncing with RESTful APIs"
+            ]
+        }
+    ]
+}
