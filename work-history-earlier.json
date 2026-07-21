@@ -1,0 +1,45 @@
+{
+    "jobs": [
+        {
+            "title": "Toseeh Kalan Dadeh Iranian, StrAIberry - iOS Engineer",
+            "location": "Tehran, Iran (Remote)",
+            "dates": "12/2020 - 10/2022",
+            "tasks": [
+                "Followed the <strong>MVVM-C</strong> architectural pattern to ensure clean and maintainable code, supported by end-to-end tests to validate functionality.",
+                "Developed and integrated advanced features such as <strong>object detection</strong> and target image capture using <strong>Vision framework</strong>, <strong>Core ML</strong>, <strong>TF-Lite</strong>, and <strong>LibTorch</strong>, following the evolution of our machine learning models.",
+                "Created custom charts with <strong>Core Graphics</strong> and <strong>Core Animation</strong> and other key app functionalities including push notifications, secure user authentication via <strong>Cognito</strong>, and a customized reminder system using <strong>Core Data</strong> and <strong>EventKit</strong>."
+            ],
+            "appstore": [
+                {
+                    "app": "StrAIberry",
+                    "link": "https://apps.apple.com/us/app/straiberry/id1590739929",
+                    "rating": 5
+                }
+            ]
+        },
+        {
+            "title": "Urmis - iOS Developer",
+            "location": "Tehran, Iran (Remote)",
+            "dates": "10/2018 - 10/2020",
+            "tasks": [
+                "Developed <strong>e-commerce</strong> applications using the <strong>MVVM</strong> architectural pattern and <strong>Test-Driven Development (TDD)</strong> principles, working towards testable code.",
+                "Programmatically composed user interfaces with <strong>UIKit</strong> and <strong>AutoLayout</strong>, optimizing for both iPhone and iPad screen sizes.",
+                "Identified and resolved performance bottlenecks using <strong>Instruments</strong>, optimizing memory and CPU usage with <strong>Grand Central Dispatch (GCD)</strong> techniques.",
+                "Implemented real-time delivery tracking features using <strong>MapKit</strong>, setting both smoothness and energy impact as priorities."
+            ],
+            "appstore": []
+        },
+        {
+            "title": "Self-Employed - Software Developer",
+            "location": "Urmia, Iran",
+            "dates": "10/2016 - 02/2018",
+            "tasks": [
+                "Engaged by six clients to develop and maintain iOS and cross-platform projects across various sectors including education, e-commerce, surveying, and food; utilizing <strong>Swift</strong>, <strong>React Native</strong> and <strong>Flutter</strong>.",
+                "Collaborated with clients to understand their needs and translate them into functional and user-friendly features.",
+                "Worked with a team of 7 to produce PvP and hypercasual in-house games using <strong>Unity3D</strong>.",
+                "Developed and maintained a <strong>Node.js</strong> backend with socket.io and MongoDB, supporting real-time multiplayer game functionality."
+            ],
+            "appstore": []
+        }
+    ]
+}

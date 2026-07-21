@@ -45,17 +45,31 @@ window.onload = async function() {
     }
 
     try {
-        const workData = await fetchJson('work-history.json');
+        const workData = await fetchJson('work-history-featured.json');
         renderWorkHistory(document.getElementById('work-history-container'), workData.jobs);
     } catch (error) {
         alert(`An error occurred while loading work history: ${error.message}`);
     }
 
     try {
-        const projectsData = await fetchJson('projects.json');
+        const projectsData = await fetchJson('projects-featured.json');
         renderProjects(document.getElementById('projects-container'), projectsData.projects);
     } catch (error) {
         alert(`An error occurred while loading projects: ${error.message}`);
+    }
+
+    try {
+        const earlierWorkData = await fetchJson('work-history-earlier.json');
+        renderWorkHistory(document.getElementById('earlier-work-history-container'), earlierWorkData.jobs);
+    } catch (error) {
+        alert(`An error occurred while loading earlier work history: ${error.message}`);
+    }
+
+    try {
+        const earlierProjectsData = await fetchJson('projects-earlier.json');
+        renderProjects(document.getElementById('earlier-projects-container'), earlierProjectsData.projects);
+    } catch (error) {
+        alert(`An error occurred while loading earlier projects: ${error.message}`);
     }
 
     try {
